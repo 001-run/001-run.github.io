@@ -1,0 +1,4 @@
+Meta
+====
+
+Manifesto goes here
