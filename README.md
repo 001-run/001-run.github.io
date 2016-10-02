@@ -12,10 +12,3 @@
  * Together we are stronger
  * Compromise arguments not artworks
  * Heat Death and Samsara
- 
-//Organic stuff:
-======
- * REGULAR DUMPS ARE IMPORTANT
- * BLOW YOUR OWN MIND
- * IN THE END THERE IS ONLY GLITCH
- * AND GLITCH SHALL PREVAIL
