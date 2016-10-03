@@ -7,6 +7,7 @@ var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     './app/index.js'
   ],
   output: {
@@ -15,7 +16,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
     ]
   },
   plugins: [HtmlWebpackPluginConfig]
