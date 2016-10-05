@@ -9,7 +9,7 @@ var oauthkey = 'mavsUhEghnm9N3SViiHachu6iKUsJAVmkPJJoJmydcFOgMVdWH'
 //tunnels down to the juicy part,
 //and returns a promise with the data"
 function fetchTumblrBlog(blogIdentifier) {
-  return fetchJsonp(apiurl+blogIdentifier+'/posts/photo?api_key='+oauthkey)
+  return fetchJsonp(apiurl+blogIdentifier+'/posts/text?api_key='+oauthkey)
     .then((response) => {
       return response.json();
     }).then((json) => {
@@ -36,17 +36,32 @@ Photo.propTypes = {
   photos: PropTypes.array.isRequired
 }
 
+class Text extends Component {
+  _createMarkup() { return (
+    {__html: this.props.body}
+  )}
+
+  render() { return (
+    <div>
+      <div className="title">{this.props.title}</div>
+      <div className="body" dangerouslySetInnerHTML={this._createMarkup()}></div>
+    </div>
+  )}
+}
+
 class PostList extends Component {
   render() {
     var posts = this.props.posts.map(
       (post) => {
         console.log(post);
         switch(post.type){
-          case 'photo':
-            return <Photo
+
+          case 'text':
+            return <Text
               key={post.id}
-              photos={post.photos}
-            />;
+              title={post.title}
+              body={post.body}
+            />
         }
       }
     );
@@ -64,7 +79,8 @@ class App extends Component {
   }
   async componentDidMount() {
     try {
-      const blog = await fetchTumblrBlog('sigmasleep.tumblr.com');
+      //using frankie's blog because it has a bunch of content and content types on it
+      const blog = await fetchTumblrBlog('frankiesmileshow.tumblr.com');
       this.setState({
         isLoading: false,
         posts: blog.posts
