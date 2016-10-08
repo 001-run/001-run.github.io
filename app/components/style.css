@@ -1,13 +1,13 @@
 .PostList{
-  max-width: 420px;
-  margin: auto;
 }
 
-.Post > div > img {
+.Post img {
   width: 100%;
 }
 
 .Post {
+  max-width: 420px;
+  margin: auto;
   border: solid black;
   border-width: medium;
   margin-top: 5px;

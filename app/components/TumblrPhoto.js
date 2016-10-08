@@ -19,7 +19,7 @@ export default class TumblrPhoto extends Component {
   render() { return (
     <div className={styles.TumblrPhoto}
           onClick={this.handleClick} >
-      <img src={this.props.photos[0].alt_sizes[0].url}></img>
+      <div><img src={this.props.photos[0].alt_sizes[0].url}></img></div>
       { this.state.captionVisible && this.props.caption?
           <div className={styles.Caption}
                dangerouslySetInnerHTML={{__html: this.props.caption}}></div>
