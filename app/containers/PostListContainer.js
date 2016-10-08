@@ -20,7 +20,7 @@ export default class PostListContainer extends Component {
         posts: blog.posts.filter(
           (post) => !post.reblogged_from_id
         )
-      })
+      });
     } catch (error) {
       console.warn('Error in tumblr blog retrieval:',error);
     }
