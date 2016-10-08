@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.Post iframe {
+  width: 100%;
+}
+
 .Post {
   max-width: 420px;
   margin: auto;
