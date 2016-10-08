@@ -8,7 +8,7 @@ var oauthkey = 'mavsUhEghnm9N3SViiHachu6iKUsJAVmkPJJoJmydcFOgMVdWH'
 //tunnels down to the juicy part,
 //and returns a promise with the data"
 export function fetchTumblrBlog(blogIdentifier) {
-  return fetchJsonp(apiurl+blogIdentifier+'/posts?api_key='+oauthkey)
+  return fetchJsonp(apiurl+blogIdentifier+'/posts?reblog_info=true&api_key='+oauthkey)
     .then((response) => {
       return response.json();
     }).then((json) => {

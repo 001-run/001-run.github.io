@@ -22,7 +22,9 @@ export default class PostContainer extends Component {
     }
   }
 
-  render() { return (
+  render() { 
+    console.log(this.props.post);
+    return (
     <Post post={this.getPostType()} />
   )}
 }
