@@ -1,0 +1,8 @@
+.PostList{
+  max-width: 300px;
+  margin: auto;
+}
+
+.TumblrPhoto > img {
+  width: 100%;
+}
