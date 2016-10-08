@@ -1,0 +1,15 @@
+.PostList{
+  max-width: 300px;
+  margin: auto;
+}
+
+.Post > div > img {
+  width: 100%;
+}
+
+.Post {
+  border: solid black;
+  border-width: medium;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

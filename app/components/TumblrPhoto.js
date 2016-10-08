@@ -1,4 +1,5 @@
 import React, {PropTypes, Component} from 'react';
+import styles from './style.css'
 
 export default class TumblrPhoto extends Component {  
   render() { return (
