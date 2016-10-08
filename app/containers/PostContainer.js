@@ -40,7 +40,8 @@ export default class PostContainer extends Component {
 
   render() {
     return (
-      <Post onClick={this.handleOnClick}>
+      <Post onClick={this.handleOnClick}
+            open={this.state.open}>
         {this.getPostType()}
       </Post>
   )}

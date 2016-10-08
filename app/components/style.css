@@ -1,12 +1,15 @@
 .PostList{
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .Post img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .Post iframe {
-  width: 100%;
+  max-width: 100%;
 }
 
 .Post {
@@ -16,6 +19,17 @@
   border-width: medium;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.Post.Open {
+  width: 100%;
+  max-width: none;
+  border: none;
+}
+
+.TumblrPhotoTitle img {
+  margin: auto;
+  display: block;
 }
 
 .Caption {
