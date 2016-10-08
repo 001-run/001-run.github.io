@@ -17,7 +17,9 @@ export default class PostListContainer extends Component {
       const blog = await fetchTumblrBlog('sigmasleep.tumblr.com');
       this.setState({
         isLoading: false,
-        posts: blog.posts
+        posts: blog.posts.filter(
+          (post) => !post.reblogged_from_id
+        )
       })
     } catch (error) {
       console.warn('Error in tumblr blog retrieval:',error);
