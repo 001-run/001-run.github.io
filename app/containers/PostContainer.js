@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import TumblrText from '../components/TumblrText';
-import TumblrPhoto from '../components/TumblrPhoto';
+import TumblrPhotoHead from '../components/TumblrPhotoHead';
+import TumblrTextBody from '../components/TumblrTextBody';
 import Post from '../components/Post'
 
 export default class PostContainer extends Component {
@@ -18,22 +18,24 @@ export default class PostContainer extends Component {
     });
   }
 
-  getPostType() {
+  getPostHead() {
     var post = this.props.post;
     switch(post.type){
       case 'photo':
-        return <TumblrPhoto
-          open={this.state.open}
+        return <TumblrPhotoHead
           key={post.id}
           photos={post.photos}
-          caption={post.caption}
         />
-      case 'text':
-        return <TumblrText
-          open={this.state.open}
+    }
+  }
+
+  getPostBody() {
+    var post = this.props.post;
+    switch(post.type){
+      case 'photo':
+        return <TumblrTextBody
           key={post.id}
-          title={post.title}
-          body={post.body}
+          text={post.caption}
         />
     }
   }
@@ -41,8 +43,9 @@ export default class PostContainer extends Component {
   render() {
     return (
       <Post onClick={this.handleOnClick}
-            open={this.state.open}>
-        {this.getPostType()}
-      </Post>
+            head={this.getPostHead()}
+            body={this.getPostBody()}
+            open={this.state.open}
+      />
   )}
 }

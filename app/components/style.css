@@ -13,18 +13,32 @@
 }
 
 .Post {
-  max-width: 420px;
-  margin: auto;
   border: solid black;
   border-width: medium;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
+.PostHeadWrapper {
+  display: flex;
+}
+
+.PostHead {
+  max-width:420px;
+  margin:auto;
+}
+
+.PostHead.Open {
+  max-width:100%;
+  margin:auto;
+}
+
+.PostBody {
+  border: solid black;
+  border-width: medium;
+}
+
 .Post.Open {
-  width: 100%;
-  max-width: none;
-  border: none;
 }
 
 .TumblrPhotoTitle img {
