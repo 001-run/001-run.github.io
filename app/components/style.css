@@ -20,16 +20,17 @@
 }
 
 .PostHeadWrapper {
+  width: 100%;
   display: flex;
 }
 
 .PostHead {
-  max-width:420px;
+  max-width: 420px;
   margin:auto;
 }
 
 .PostHead.Open {
-  max-width:100%;
+  max-width: none;
   margin:auto;
 }
 
