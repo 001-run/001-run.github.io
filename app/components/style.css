@@ -13,14 +13,11 @@
 }
 
 .Post {
-  border: solid black;
-  border-width: medium;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 .PostHeadWrapper {
-  width: 100%;
   display: flex;
 }
 
@@ -30,13 +27,18 @@
 }
 
 .PostHead.Open {
-  max-width: none;
+  max-width: 100%;
   margin:auto;
+  transition: max-width 0.5s;
 }
 
 .PostBody {
   border: solid black;
   border-width: medium;
+  width: 720px;
+  margin: auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .Post.Open {
