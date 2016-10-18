@@ -1,3 +1,5 @@
+
+
 .PostList{
   display: inline-flex;
   flex-direction: column;
@@ -23,25 +25,31 @@
 
 .PostHead {
   max-width: 420px;
-  margin:auto;
+  margin: auto;
+  transition: max-width 0.5s;
 }
 
 .PostHead.Open {
   max-width: 100%;
-  margin:auto;
-  transition: max-width 0.5s;
+  margin: auto;
+  transition: max-width 1s;
 }
 
 .PostBody {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.PostBody.Open {
   border: solid black;
   border-width: medium;
-  width: 720px;
+  max-width: 720px;
   margin: auto;
   padding-left: 1em;
   padding-right: 1em;
-}
-
-.Post.Open {
+  max-height: 100000px;
+  overflow: hidden;
+  transition: max-height 2s;
 }
 
 .TumblrPhotoTitle img {

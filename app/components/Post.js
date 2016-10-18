@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import styles from './style.css'
 
 export default class Post extends Component {
@@ -21,13 +22,16 @@ export default class Post extends Component {
   createPostBody(){
     if(this.props.open){
       return (
-        <div className={styles.PostBody}>
+        <div className={styles.PostBody + ' ' + styles.Open}
+             key={this.props.body.key}>
           {this.props.body}
         </div>
       )
     }
 
-    return null
+    return <div className={styles.PostBody}
+             key={this.props.body.key}>
+        </div>
   }
 
   render() {
