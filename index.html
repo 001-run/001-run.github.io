@@ -16,15 +16,61 @@
     <link rel="stylesheet" type="text/css" href="style.css"></link>
   </head>
 
-  <body>
+  <body onload="init();">
+    <script>
+      function init()
+      {
+        let message = document.createElement("center");
+        let span = document.createElement("span");
+        span.class = "tagline";
+        
+        let entropy = Math.floor(Math.random() * 4);
+
+        switch(entropy)
+        {
+          case 0:
+          {
+            let p = document.createElement("p");
+            p.textContent = "in the end there is only glitch";
+
+            span.appendChild(p);
+
+            p = document.createElement("p");
+            p.textContent = "and glitch shall prevail";
+
+            span.appendChild(p);
+
+            message.appendChild(span);
+          } break;
+          case 1:
+          {
+            let p = document.createElement("p");
+            p.textContent = "the meaning is emergent";
+
+            span.appendChild(p);
+          } break;
+          case 2:
+          {
+            let p = document.createElement("p");
+            p.textContent = "the coin lost in the river";
+
+            span.appendChild(p);
+
+            p = document.createElement("p");
+            p.textContent = "is found in the river";
+
+            span.appendChild(p);
+          } break;
+          case 3:
+          {} break;
+        }
+
+        message.appendChild(span);
+        document.getElementById("andnothing").appendChild(message);
+      }
+    </script>
     <div class="container">
-      <div class="everything">
-        <center>
-          <span class="tagline">in the end there is only glitch</span>
-          </br>
-          </br>
-          <span class="tagline">and glitch shall prevail</span>
-        </center>
+      <div class="everything" id="andnothing">
       </div>
     </div>
 
